@@ -44,7 +44,7 @@ jobs:
       uses: actions/dowload-artifact@v4
       with: 
        name: dist-files
-       path: dist-files
+       path: ./opt
     - name: Output content
-      run: ls
+      run: ls/opt
      
