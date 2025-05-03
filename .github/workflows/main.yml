@@ -41,10 +41,9 @@ jobs:
    runs-on: ubuntu-latest
    steps:
     - name: Get artifacts
-      uses: actions/dowload-artifact@v4
+      uses: actions/download-artifact@v4
       with: 
        name: dist-files
-       path: ./opt
     - name: Output content
-      run: ls/opt
+      run: ls
      
