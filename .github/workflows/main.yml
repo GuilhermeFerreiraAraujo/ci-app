@@ -36,3 +36,14 @@ jobs:
         with: 
           name: dist-files
           path: build
+  deploy:
+   needs: build_test
+   runs-on: ubuntu-latest
+   steps:
+    - name: Get artifacts
+      uses: actions/dowload-artifact@v3
+      with: 
+       name: dist-files
+    - name: Output content
+      run: ls
+     
