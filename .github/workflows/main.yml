@@ -41,7 +41,7 @@ jobs:
    runs-on: ubuntu-latest
    steps:
     - name: Get artifacts
-      uses: actions/dowload-artifact@v3
+      uses: actions/dowload-artifact@v4
       with: 
        name: dist-files
     - name: Output content
