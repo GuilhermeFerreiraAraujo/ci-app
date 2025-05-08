@@ -60,7 +60,7 @@ jobs:
           path: 'build' 
         continue-on-error: true
         
-      - name: Upload artifact
+      - name: Upload github pages artifact
         if: matrix.os == 'unbuntu-latest'
         uses: actions/upload-pages-artifact@v3
         with:
