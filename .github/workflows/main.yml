@@ -61,7 +61,7 @@ jobs:
         continue-on-error: true
         
       - name: Upload github pages artifact
-        if: matrix.os == 'unbuntu-latest'
+        if: matrix.os == 'ubuntu-latest'
         uses: actions/upload-pages-artifact@v3
         with:
           path: 'build/.'
