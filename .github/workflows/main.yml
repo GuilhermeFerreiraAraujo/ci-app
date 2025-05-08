@@ -50,14 +50,15 @@ jobs:
         run: |
           npm run build
           npm test 
+
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          path: 'build'
+          path: ${{ matrix.os + '_build' }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'build/.'
+          path: ${{ matrix.os + '_build./' }}'build/.'
 
   deploy:
           # Add a dependency to the build job
