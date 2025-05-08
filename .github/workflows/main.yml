@@ -30,6 +30,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - name: Operating System
+        run: echo ${{ matrix.os }}
 
       - name: Cache node_modules
         id: modules-cache
@@ -54,11 +56,11 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          path: ${{ matrix.os + '_build' }}
+          path: 'build' 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ${{ matrix.os + '_build./' }}'build/.'
+          path: 'build/.'
 
   deploy:
           # Add a dependency to the build job
